@@ -3,20 +3,437 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Port</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/custom.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<title>portfoloio</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
 </head>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&display=swap');
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+
+*{
+ margin:0px;
+ padding:0px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  text-align: center;
+  margin: 30px 50px;
+}
+
+.counter {
+  font-size: 60px;
+  margin-top: 10px;
+}
+
+@media (max-width: 580px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+
+.navbar-nav .dropdown-menu li a:hover{
+color: white;
+background-color: #e54b4b !important;
+border-radius: 16px;
+
+}
+
+.navbar-nav li a:hover{
+  color:#e54b4b !important ;
+  background: white;
+  border-radius: 12px;
+  transition: 1s;
+}
+
+
+
+/*@media screen and (max-width: 792px){
+  .navbar-toggler{
+    font-size: 26px;
+    float: right;
+  }
+  
+  #logo{
+    display: none;
+  }
+
+  #bi{
+    float: right;
+  }
+  #se{
+    display: none;
+  }
+  #arp{
+    text-align: justify;
+  }
+  #ar{
+    font-size: 14px;
+    display: block;
+  }
+
+} */
+
+
+
+
+
+body{
+    margin:0px;
+    padding:0px;
+    overflow-x: hidden !important;
+}
+
+
+
+.navbar li a{
+    margin:auto 1vw;
+    font-size:15px;
+    color: white !important;
+    font-family: Montserrat,sans-serif;
+    font-weight: 600;
+}
+
+.navbar li a:hover{
+    color: red;
+}
+
+/* .navbar{
+    background: rgb(206,16,208);
+background: linear-gradient(25deg, rgba(206,16,208,1) 0%, rgba(41,9,38,1) 100%, rgba(211,211,211,1) 100%);
+} */
+
+/*.navbar-nav li a::after{
+   content: '';
+   display: block;
+   height: 3px;
+   width: 100%;
+   background:white;
+   transform: scaleX(0);
+   transform-origin:left;
+   transition: transform 0.3s ease;
+}
+.navbar-nav li a:hover::after{
+   transform: scaleX(1.0);
+}
+
+.navbar-nav li a:hover{
+    color: darkred;
+} */
+
+.bg-video-wrapper{
+    height: 100%;
+    overflow: hidden;
+    position:relative;
+    z-index: -1;
+    width: 100%;
+}
+
+.outter.hero-video{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  
+  
+}
+
+.hero-video {
+  }
+.video-container {
+  height:100%;
+  width:100%;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.head{
+    font-family: Montserrat,sans-serif;
+    color: #e54b4b!important;
+    font-size: 3.1rem;
+}
+
+.bg{
+
+}
+
+/*.container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Cursor */
+    .txt-type > .txt {
+      border-right: 0.2rem solid #777;
+    }
+
+  @media(min-width: 1200px) {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media(max-width: 800px) {
+      .container {
+        padding: 0 1rem;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    @media(max-width: 500px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+  .bg{
+    background-image:rgba(0, 0, 0, 0.5) url('gallery/bg.jpg');
+   background-repeat:no-repeat;
+   background-size:100% 100%;
+  } 
+
+  .text-primaryy{
+    color: #e54b4b;
+  }
+
+  .para{
+    text-align: justify;
+  }
+
+  .button{
+    background-color:#e54b4b !important;
+    color: white !important;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+.Hobbies h6{
+    font-size: 24px;
+    font-family:Montserrat,sans-serif;
+}
+
+.carde{
+ transition: transform .3s;
+}
+
+.carde:hover{
+    border-radius: 10px;
+   /* background:#e54b4b !important; */
+    color:#e54b4b;
+    transform: scale(1.1); 
+    
+}
+
+.card{
+    border-radius: 8px;
+background: #e0e0e0;
+box-shadow: inset -5px 5px 25px #afafaf,
+            inset 5px -5px 25px #ffffff;
+}
+
+
+button.neumorphic {
+  container-type: inline-size;
+  aspect-ratio: 1/1;
+  border: 0.5rem solid transparent;
+  border-radius: 1rem;
+  color: hsl(0 0% 10%);
+  background: none;
+  
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  
+  --shadow: 
+    -.5rem -.5rem 1rem hsl(0 0% 100% / .75),
+    .5rem .5rem 1rem hsl(0 0% 50% / .5);
+  box-shadow: var(--shadow);
+  outline: none;  
+  transition: all 0.1s;
+  
+  &:hover, &:focus-visible {
+    color: hsl(10 80% 50%);
+    scale: 1.1
+  }
+  &:active, &.active{
+    box-shadow:
+      var(--shadow),
+      inset .5rem .5rem 1rem hsl(0 0% 50% / .5),
+      inset -.5rem -.5rem 1rem hsl(0 0% 100% / .75);
+    color: hsl(10 80% 50%);
+    > i { font-size: 28cqi};
+    > span { font-size: 13cqi};
+  }
+
+  >i {
+    font-size: 31cqi;
+  }
+  > span {
+    font-family: system-ui, sans-serif;
+    font-size: 16cqi;
+  }
+}
+
+.cd__main {
+  background-color: #e5e9f4 !important;
+  padding: 2rem;
+}
+h1 {
+  text-align: center;
+  color: hsl(0 0% 10%);
+  font-family: system-ui, sans-serif;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+.buttons {
+  display: grid;
+  width: min(75rem, 100%);
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
+  gap: 2rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.skillcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height:90vh;
+}
+.skillcontainer .wrapper{
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.skillcontainer .wrapper .card{
+  background: #262626;
+  width: calc(33% - 20px);
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.wrapper .card:hover{
+  background-color:#e54b4b;
+  color: black;
+  transform: translateY(-14px);
+  transition: background 1s, color 1s, transform 0.5s;
+}
+.skillcontainer .wrapper .card .circle{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  cursor: default;
+}
+.skillcontainer .card .circle .box,
+.skillcontainer .card .circle .box span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.skillcontainer .card .circle .box{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: all 0.2s;
+}
+.skillcontainer .card .circle:hover .box{
+  transform: translate(-50%, -50%) scale(0.91);
+}
+.skillcontainer .card .circle .box span,
+.skillcontainer .wrapper .card .text{
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.skillcontainer .circle .box span{
+  font-size: 38px;
+  font-family: sans-serif;
+  font-weight: 600;
+  transform: translate(-45%, -45%);
+  transition: all 0.1s;
+}
+.skillcontainer .card .circle:hover .box span{
+  transform: translate(-45%, -45%) scale(1.09);
+}
+.skillcontainer .card .text{
+  font-size: 20px;
+  font-weight: 600;
+}
+@media(max-width: 753px){
+  .skillcontainer .wrapper{
+    max-width: 700px;
+  }
+  .skillcontainer  .wrapper .card{
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+}
+@media(max-width: 505px){
+  .skillcontainer .wrapper{
+    max-width: 500px;
+  }
+  .skillcontainer .wrapper .card{
+    width: 100%;
+  }
+}
+
+
+.box-circle{
+         height:50px;
+         width:50px;
+         border-radius:50%;
+         background-color:#e54b4b;
+         border-color: white;
+         transition: transform .3s;
+      }
+.box-circle:hover{
+ background: black;
+ color:;   
+transform: scale(1.1);
+}
+
+
+</style>
 <body>
- <!-- Navbar Start -->
 
 <section class="bg" style="background:url('gallery/bg.jpg');background-size: cover; background-repeat: no-repeat;background-color: rgba(0, 0, 0, 0.5)">
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
@@ -34,7 +451,7 @@
           <a class="nav-link text-white" href="about.html">ABOUT US</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">RESUME</a>
+          <a class="nav-link" href="gallery/arpit resume1.pdf">RESUME</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://riveyrainfotech.com/dghrd/">PROJECTS</a>
@@ -43,25 +460,20 @@
           <a class="nav-link" href="cont.html">CONTACT</a>
         </li>
         
-        <li class="nav-item dropdown">
-          <a class="nav-link " href="#" >
-            PAGES
-          </a>
-          
-        </li>
+      
       </ul>
       <form class="d-flex">
-      	<div class="rounded-circle">
+      	<div class="">
           <a href="#" style="text-decoration:none;" class="btn text-white  shadow-lg"><i class="fa fa-whatsapp fa-lg me-1 text-white" aria-hidden="true"></i></a>
        </div>
        <div class="">
        		<!--<i class="fa fa-instagram fa-lg text-white"><a href="https://www.instagram.com/9_6_arpit?igsh=MXI1OGdrODdiY21jNQ==" style="text-decoration:none;"></a></i>-->
 
-          <a class="btn text-white me-1 shadow-lg" href="https://www.instagram.com/9_6_arpit?igsh=MXI1OGdrODdiY21jNQ=="><i class="fa fa-instagram fa-lg"></i></a>
+          <a class="btn text-white me-1 shadow-lg" href="https://www.instagram.com/9_6_arpit?igsh=MXI1OGdrODdiY21jNQ=="><i class="fa fa-instagram "></i></a>
 
        </div>
        <div class="mx-2">
-        <a href="https://www.linkedin.com/in/arpit-srivastava-959774246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn text-white shadow-lg"> <i class="fa fa-linkedin fa-lg text-white" aria-hidden="true"></i></a>
+        <a href=" " class="btn text-white shadow-lg"> <i class="fa fa-linkedin fa-lg text-white" aria-hidden="true"></i></a>
        </div>
       </form>
     </div>
@@ -89,8 +501,9 @@
 <div class=" d-flex justify-content-center mt-3">
   <div class="mt-3">
              <button type="button" class="btn text-white ms-2" style="background-color:#e54b4b;font-family:Montserrat,sans-serif ;">
+              <a href="gallery/arpit resume1.pdf" class="text-white" style="text-decoration: none;">
               Download CV
-              <i class="fa fa-download ms-2" aria-hidden="true"></i>
+              <i class="fa fa-download ms-2" aria-hidden="true"></i></a>
               </button>
            </div>
 </div>
@@ -150,10 +563,6 @@
   </div>
 </section>
 
-<!-- About Us End  -->
-
-
-<!-- Hobbies start -->
 
 <section class="Hobbies mt-4">
   <div class="d-flex justify-content-center">
@@ -633,10 +1042,6 @@ window.open("https://medium.com/@nitinmaurya969543")
 </script>
 
 </script>
-
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 
 
 
